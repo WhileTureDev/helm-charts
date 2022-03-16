@@ -1,10 +1,10 @@
 name: Release Charts
-
 on:
   push:
     branches:
       - main
-    tags: ['v*']
+    paths:
+      - charts/**
 
 jobs:
   release:
@@ -24,3 +24,4 @@ jobs:
         uses: helm/chart-releaser-action@v1.1.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
