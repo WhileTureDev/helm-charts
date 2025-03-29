@@ -7,5 +7,5 @@ helm repo update
 ## Install n8n
 
 ```shell
-helm upgrad --install my-n8n n8n/n8n --version stable -n n8n --create-namespace -f values.yaml
+helm upgrade --install my-n8n n8n/n8n  -n n8n --create-namespace -f values.yaml
 ```
